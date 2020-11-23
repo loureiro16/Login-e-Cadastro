@@ -5,42 +5,34 @@
     <meta charset="utf -8">
     <meta name="newport" conten="width=device-width, initial-scalet=1.0">
     <meta htttp-equiv="X-UA-Compatible" content="ie=edge">
-    <title>V&M Sua mudan�a come�a aqui </title>
+    <title>V&M Sua mudança começa aqui </title>
     <link rel="stylesheet" href="estilo.css">
-    <script src="https://kit.fontawesome.com/f769ba1a2b.js" crossorigin="anonymous"></script>
 
 </head>
 
-<body>
+<body >
     <div class="container">
         <div class=" conteudo conteudoA">
             <div class="colunaA">
                 <h2 class="titulo Esq">Login</h2>
-                <p class="descricao  Esq">A sua Mudan�a come�a aqui</p>
-                <p class="descricao  Esq">Logue com as suas informa��es pessoais</p>
-                <button class="btn primario">Entrar</button>
+                <p class="descricao  Esq">A sua Mudança começa aqui</p>
+                <p class="descricao  Esq">Logue com as suas informações pessoais</p>
+                <button id="entrar" class="btn primario">Entrar</button>
             </div>
             <div class="colunaB">
                 <h2 class="titulo Dir">Cadastro</h2>
-                <div class="redes">
-                    <ul class="sociais">
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fad fa-envelope-open-text"></i></a></li>
-                    </ul>
-                </div>
+                
                 <p class="descricao Dir">Ou insira o email cadastrado</p>
                 <form class="formulario" name="login" method="post" action="NOME DA PASTA">
-
-
-                    <input type="text" name="nome" class="campo" maxlength "40" placholder="Nome" required autofocus />
-
-                    <input type="text" name="cpf" type="text" class="campo" maxlength "11" placeholder="Cpf" />
-
-                    <input type="text" name="email" type="text" class="campo" placeholder="Email" />
-
+                        <input type="text" name="nome"  type="text" class="campo" maxlength "40" placeholder="Nome" />
+                    
+                        <input type="text" name="cpf" type="text" class="campo" maxlength "11" placeholder="CPF" />
+                    
+                        <input type="text" name="email" type="text" class="campo" placeholder="Email" />
+                    
                     <input type="text" name="senha" type="password" class="campo" maxlength="12" placeholder="Senha" />
 
-                    <button class="btn">Cadastrar</button>
+                    <button class="btn secundario">Cadastrar</button>
 
                 </form>
             </div>
@@ -48,19 +40,14 @@
         <div class="conteudo conteudoB">
             <div class="colunaA">
                 <h2 class="titulo Esq"> Seja Bem-Vindo</h2>
-                <p class="descricao  Esq">A sua Mudan�a come�a aqui</p>
-                <p class="descricao  Esq">Insira suas informa��es pessoais</p>
-                <button class="btn">Cadastrar</button>
+                <p class="descricao  Esq">A sua Mudança começa aqui</p>
+                <p class="descricao  Esq">Insira suas informações pessoais</p>
+                <button id="sair" class="btn primario">Cadastrar</button>
             </div>
 
             <div class="colunaB">
                 <h2 class="titulo Dir">Login</h2>
-                <div class="redes">
-                    <ul class="sociais">
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fad fa-envelope-open-text"></i></a></li>
-                    </ul>
-                </div>
+                
                 <p class="descricao Dir">Ou insira o email cadastrado</p>
                 <form class="formulario" name="login" method="post" action="NOME DA PASTA">
 
@@ -68,14 +55,14 @@
 
                     <input type="text" name="senha" type="password" class="campo" maxlength="12" placeholder="Senha" />
 
-                    <button class="btn">Entrar</button>
-                    <a href="#"> Esqueceu a Senha?</a>
+                    <button class="btn secundario">Entrar</button>
+                    <a href="#" class="esqSenha"> Esqueceu a Senha?</a>
                 </form>
             </div>
 
         </div>
     </div>
-
+     <script src ="app.js"></script>
 </body>
 
 </html>

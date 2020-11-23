@@ -6,6 +6,9 @@
 	--cor-tituloEsq:#ffffff;
 	--cor-tituloDir:#000000;
 	--cor-botao:#ffffff;
+	--cor-redes:#ffffff;
+	--cor-formulario:#ecf0f1;
+	--cor-botaoB:#4682b4;
 }
 *{
 	margin:0;
@@ -19,8 +22,7 @@ body{
 .titulo{
 	font-family:36px;
 	font-weight:bold;
-	
-	text-transform:capitalize;:
+	text-transform:capitalize;
 }
 .Esq{
 	color:var(--cor-tituloEsq);
@@ -30,15 +32,15 @@ body{
 }
 /*DESCRIÇÃO*/
 .descricao{
-	font-size:18px;
+	font-size:14px;
 	font-weight:200px;
 	line-height:30px;
 }
 .Esq{
 	color:var(--cor-tituloEsq);
 }
-	.Dir{
-		color:var(--cor-tituloDir);
+.Dir{
+	color:var(--cor-tituloDir);
 	}
 /*BOTÃO*/
 .btn{
@@ -48,14 +50,29 @@ body{
 	cursor:pointer;
 	font-weight:bold;
 	font-weight:bold;
+	width: 150px;
+	align-self: center;
+	border-width: 0px;;
 }
 .primario{
 	background-color:transparent;
 	font-size:12px;
 	padding:10px 50px;
-	border:1px solid #ffffff;
+	border:1px solid (--cor-redes);
+	transition:background-color 0.8s;
 }
 .primario:hover{
+	background-color:var(--cor-padrao);
+	color:var(--cor-tituloDir);
+}
+.secundario{
+	background-color:var(--cor-botaoB);
+	font-size:12px;
+	padding:10px 50px;
+	border:1px solid var(--cor-formulario);
+	transition:background-color 0.8s;
+}
+.secundario:hover{
 	background-color:var(--cor-padrao);
 	color:var(--cor-tituloDir);
 }
@@ -67,19 +84,23 @@ body{
 	height:100vh;
 	background-color:var(--cor-padrao);
 }
-/*DIV DOS ICONES DAS REDES SOCIAIS*/
-.sociais{
-	display:flex;
-}
 /*FORMULARIO*/
 .formulario{
 	display:flex;
 	flex-direction:column;
+	width: 55%;
+}
+.formulario input{
+	height: 30px;
+	border:none;
+	background-color:var(--cor-formulario);
+	margin:5px;
+	border-radius:15px;
 }
 /*DIV DOS CONTEUDOS DA PAGINA*/
 .conteudo{
 	border-radius:15px;
-	width:80%;
+	width:960px;
 	height:50%;
 	display:flex;
 	justify-content:space-between;
@@ -92,7 +113,11 @@ body{
 	background-color:var(--cor-container);
 	width:40%;
 	height:100%;
-	
+
+	left:0;
+}
+.conteudoA .colunaB{
+	z-index:11;
 }
 .conteudoA{
 	display:flex;
@@ -100,14 +125,120 @@ body{
 }
 .conteudoB{
 	position:absolute;
-	display:none;
+	display:flex;
+}
+.esqSenha{
+	margin-left:150px;
+	font-size:8px;
+	margin-top:15px;
+}
+
+.conteudoB .colunaA{
+	order:2;
+	z-index: -1;
+}
+
+.conteudoB .colunaB{
+	order:1;
+	z-index:-1;
 }
 /*COLUNAS*/
 .colunaA{
 	text-align:center;
-	flex:1 0 auto;
+	width: 40%;
 	z-index:10;
 }
 .colunaB{
-	flex:2 0 auto;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.entrar-js .conteudoA .colunaA,
+.entrar-js .conteudoA .colunaB{
+	z-index: -1;
+}
+
+
+.entrar-js .conteudoB .colunaB{
+	z-index: 11;
+}
+.entrar-js .conteudoB .colunaA{
+	z-index:13;
+}
+.entrar-js .conteudo::before{
+	left:60%;
+	border-top-right-radius:0; 
+	border-bottom-right-radius:0; 
+	border-top-right-radius:15px;
+	border-bottom-right-radius:15px; ;
+	animation: slidein 2s;
+	z-index: 12;
+}
+.sair-js .conteudo::before{
+	animation:slideout 2s;
+	z-index:12;
+	
+}
+.sair-js .conteudoB .colunaA,
+.sair-js .conteudoB .colunaB{
+	z-index:-1;
+}
+
+.sair-js .conteudoA .colunaB{
+	z-index:11;
+}
+.sair-js .conteudoA .colunaA{
+	z-index:13;
+}
+
+/*ANIMAÇÃO CSS*/
+
+@keyframes slidein{
+	from{
+		left:0;
+		width: 40%;
+	}
+	25%{
+		left:5%;
+		width: 50%;
+	}
+	50%{
+		left:25%;
+		width: 60%;
+	}
+	75%{
+		left:45%;
+		width: 50%;
+	}
+
+	to{
+		left:60%;
+		width: 40%;
+	}
+}
+
+@keyframes slideout{
+	from{
+		left:60%;
+		width: 40%;
+	}
+	25%{
+		left:45%;
+		width: 50%;
+	}
+	50%{
+		left:25%;
+		width: 60%;
+	}
+	75%{
+		left:5%;
+		width: 50%;
+	}
+
+	to{
+		left:0;
+		width: 40%;
+	}
 }
